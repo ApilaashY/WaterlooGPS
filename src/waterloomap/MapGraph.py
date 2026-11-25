@@ -25,12 +25,12 @@ class MapJunction():
         return f"MapJunction(id={self.id},\nconnections={self.connections})"
 
 class MapConnection():
-    def __init__(self, path: "MapPath", direction: int):
+    def __init__(self, path: "MapPath", angle: int):
         self.path = path
-        self.direction = direction % 360
+        self.angle = angle % 360
 
     def __repr__(self):
-        return f"MapConnection(path={self.path.id}, direction={self.direction})"
+        return f"MapConnection(path={self.path.id}, angle={self.angle})"
 
 path1 = MapPath("path1", [])
 path2 = MapPath("path2", [])
